@@ -214,7 +214,6 @@ def adjustmentDCoef(mass_d, mass_d_base):
 def waveletMexH(signal):
     scales = np.arange(1, 100)
     coef, freqs = pywt.cwt(signal, scales, 'mexh')
-
     plt.imshow(np.abs(coef), extent=[0, len(signal), freqs[-1], freqs[0]], cmap='jet', aspect='auto')
     plt.colorbar()
     plt.title('Скейлограмма вейвлета Мексиканская шляпа')
@@ -229,7 +228,6 @@ def waveletMexH(signal):
 def waveletMorlet(signal):
     scales = np.arange(1, 100)
     coef, freqs = pywt.cwt(signal, scales, 'morl')
-
     plt.imshow(np.abs(coef), extent=[0, len(signal), freqs[-1], freqs[0]], cmap='jet', aspect='auto')
     plt.colorbar()
     plt.title('Скейлограмма вейвлета Морлета')
@@ -275,7 +273,7 @@ ax[1].set_title('Исходный сигнал с помехами')
 ax[2].set_title('Восстановленный сигнал')
 ax[3].set_title('Сигнал с устраненными помехами')
 ax[4].set_title('Сигнал с изменяющейся частотой')
-ax[5].set_title('Сигнал со случайными искажениями')
+ax[5].set_title('Сигнал со случайными искажениямиф')
 # ax[6].set_title('Сигнал меандра')
 # ax[7].set_title('Сигнал меандра восстановленный')
 fig.suptitle('Графики сигналов')
